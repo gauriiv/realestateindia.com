@@ -1,0 +1,325 @@
+/* Header CSS */
+:root {
+    --header-bg: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #555555;
+    --primary-blue: #1d70b8;
+    --primary-blue-hover: #155a96;
+    --brand-red: #ea4335;
+    --badge-yellow: #fbbc04;
+    --border-color: #e5e5e5;
+    --font-inter: 'Inter', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-inter);
+    background-color: #f8f9fa;
+}
+
+.main-header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* Logo Section */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: var(--brand-red);
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    letter-spacing: -0.5px;
+}
+
+.logo-text span {
+    color: var(--brand-red);
+}
+
+.location-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding-left: 20px;
+    border-left: 1px solid var(--border-color);
+}
+
+.location-dropdown i {
+    font-size: 12px;
+    color: #888;
+}
+
+.location-dropdown:hover {
+    color: var(--primary-blue);
+}
+
+/* Navigation Section */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+.nav-item a i {
+    font-size: 10px;
+    color: #999;
+}
+
+.nav-item a:hover {
+    color: var(--primary-blue);
+}
+
+.nav-item a:hover i {
+    color: var(--primary-blue);
+}
+
+/* Action Section */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.post-property-btn {
+    position: relative;
+    background-color: var(--primary-blue);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.post-property-btn:hover {
+    background-color: var(--primary-blue-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(29, 112, 184, 0.3);
+}
+
+.badge-free {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background-color: var(--badge-yellow);
+    color: #000;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.help-icon {
+    color: var(--text-secondary);
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+.help-icon:hover {
+    color: var(--primary-blue);
+}
+
+.signin-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-left: 1px solid var(--border-color);
+    padding-left: 20px;
+    transition: var(--transition);
+}
+
+.signin-btn i {
+    font-size: 22px;
+    color: var(--text-secondary);
+}
+
+.signin-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.main-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.sub-text {
+    font-size: 12px;
+    color: #888;
+}
+
+.signin-btn:hover i {
+    color: var(--primary-blue);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-btn {
+    display: none;
+    font-size: 24px;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .header-nav {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+    .header-nav.active {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-top: 1px solid var(--border-color);
+    }
+    .header-nav.active ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .location-dropdown {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-actions {
+        gap: 10px;
+    }
+    .post-property-btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    .signin-text {
+        display: none;
+    }
+    .signin-btn {
+        padding-left: 10px;
+    }
+    .logo-text span {
+        display: none; /* Hide 'India' on mobile for space */
+    }
+}
+
+/* Dropdown Navigation Styles */
+.nav-item.has-dropdown {
+    position: relative;
+}
+
+.nav-item .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item.has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-item .dropdown li {
+    margin: 0;
+}
+
+.nav-item .dropdown li a {
+    padding: 10px 20px;
+    color: #555;
+    font-size: 14px;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-item .dropdown li a:hover {
+    background: #f0f7fc;
+    color: var(--primary-blue);
+}
+
+/* Global Click Ripple Animation */
+.click-ripple {
+    position: fixed;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-anim 0.6s linear;
+    background: rgba(29, 112, 184, 0.4);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes ripple-anim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}

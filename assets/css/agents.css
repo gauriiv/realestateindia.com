@@ -1,0 +1,177 @@
+/* Agents Section Styles */
+.agents-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.agents-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.agents-header .section-title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.agents-header .section-title span {
+    font-weight: 600;
+    color: #1d70b8;
+}
+
+.agents-header .section-subtitle {
+    color: #666;
+    font-size: 15px;
+    margin: 0;
+}
+
+.view-all-agents {
+    background: transparent;
+    border: none;
+    color: #1d70b8;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.view-all-agents:hover {
+    color: #0045a5;
+    text-decoration: underline;
+}
+
+.agents-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.agent-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #eee;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: all 0.4s ease;
+}
+
+/* Lighter Theme Hover Animation */
+.agent-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(29, 112, 184, 0.15);
+    border-color: #cce1f0;
+    background-color: #f0f7fc; /* Lighter theme on hover */
+}
+
+.agent-profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.agent-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.agent-details h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.agent-card:hover .agent-details h4 {
+    color: #1d70b8;
+}
+
+.agent-firm {
+    color: #666;
+    font-size: 13px;
+    margin: 0 0 10px 0;
+}
+
+.agent-rating {
+    color: #fbbc04;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.agent-rating span {
+    color: #888;
+    margin-left: 5px;
+}
+
+.agent-loc {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.agent-loc i {
+    color: #1d70b8;
+    margin-right: 5px;
+}
+
+.agent-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.agent-btn {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+}
+
+.call-btn {
+    background: #1d70b8;
+    color: #fff;
+    border: 1px solid #1d70b8;
+}
+
+.call-btn:hover {
+    background: #0045a5;
+}
+
+.message-btn {
+    background: transparent;
+    color: #1d70b8;
+    border: 1px solid #1d70b8;
+}
+
+.message-btn:hover {
+    background: #f0f7fc;
+}
+
+@media (max-width: 1024px) {
+    .agents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .agents-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .agents-grid {
+        grid-template-columns: 1fr;
+    }
+}

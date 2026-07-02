@@ -1,0 +1,255 @@
+/* Cities Section Styles */
+.cities-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.section-container {
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    font-weight: 600;
+    color: #1d70b8; /* Lighter theme on highlight keywords */
+}
+
+.cities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.city-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 120px;
+}
+
+.city-card:hover {
+    transform: translateY(-5px);
+}
+
+.city-img-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.city-card:hover .city-img-wrapper {
+    box-shadow: 0 10px 25px rgba(29, 112, 184, 0.3);
+    transform: scale(1.05);
+}
+
+.city-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.city-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.city-card:hover .city-name {
+    color: #1d70b8; /* Lighter theme on hover */
+}
+
+.city-props {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Expandable Panel */
+.city-property-panel {
+    background-color: #f4f8fb;
+    border: 1px solid #cce1f0;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 40px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    position: relative;
+}
+
+.city-property-panel.active {
+    display: block;
+    animation: fadeIn 0.4s forwards;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dce8f0;
+}
+
+.panel-header h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 400;
+    color: #333;
+}
+
+.panel-header h3 span {
+    font-weight: 600;
+    color: #1d70b8;
+}
+
+.close-panel {
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-panel:hover {
+    color: #333;
+}
+
+.panel-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.panel-left, .panel-right {
+    flex: 1;
+}
+
+.panel-left h4, .panel-right h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+    display: flex;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.tgl-btn {
+    padding: 10px 30px;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tgl-btn.active {
+    background: #1d70b8;
+    color: #fff;
+}
+
+/* Category Buttons */
+.category-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.cat-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 100px;
+}
+
+.cat-btn i {
+    font-size: 24px;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.cat-btn span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+}
+
+.cat-btn:hover {
+    border-color: #1d70b8;
+    box-shadow: 0 4px 10px rgba(29, 112, 184, 0.1);
+}
+
+.cat-btn.active {
+    border-color: #1d70b8;
+    background: #f0f7fc;
+}
+
+.cat-btn.active i {
+    color: #1d70b8;
+}
+
+.cat-btn.active span {
+    color: #1d70b8;
+}
+
+.panel-action {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.view-properties-btn {
+    background: #ea4335;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.view-properties-btn:hover {
+    background: #c53024;
+}
+
+@media (max-width: 768px) {
+    .panel-layout {
+        flex-direction: column;
+        gap: 25px;
+    }
+}

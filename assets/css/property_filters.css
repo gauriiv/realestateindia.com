@@ -1,0 +1,172 @@
+/* Property Filters Section */
+.property-filters-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.property-filters-section .footer-container {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.property-filters-section .console-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.property-filters-section .console-header h2 {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.property-filters-section .console-header p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+/* Switch Toggles */
+.property-filters-section .console-toggles {
+    display: inline-flex;
+    background-color: #fff;
+    padding: 6px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+}
+
+.property-filters-section .console-toggle-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.property-filters-section .console-toggle-btn.active {
+    background-color: #1d70b8;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(29, 112, 184, 0.35);
+}
+
+/* Console Content Areas */
+.property-filters-section .console-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.property-filters-section .console-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Filter Groups */
+.property-filters-section .filter-group {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.property-filters-section .filter-group:last-child {
+    border-bottom: none;
+}
+
+.property-filters-section .filter-label {
+    width: 180px;
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+    flex-shrink: 0;
+}
+
+.property-filters-section .filter-label i {
+    color: #1d70b8;
+}
+
+.property-filters-section .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.property-filters-section .filter-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.property-filters-section .filter-btn:hover {
+    color: #1d70b8;
+    border-color: #1d70b8;
+}
+
+.property-filters-section .filter-btn.active {
+    background-color: #f0f7fc;
+    border-color: #1d70b8;
+    color: #1d70b8;
+    font-weight: 600;
+}
+
+/* Seller Intro banner */
+.property-filters-section .seller-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(29, 112, 184, 0.1) 0%, rgba(26, 188, 156, 0.1) 100%);
+    border: 1px solid #cce1f0;
+    border-radius: 16px;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.property-filters-section .seller-intro-content h3 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.property-filters-section .seller-intro-content p {
+    color: #666;
+    font-size: 14px;
+    max-width: 750px;
+    margin: 0;
+}
+
+.property-filters-section .seller-cta-btn {
+    background-color: #1abc9c;
+    color: #fff !important;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
