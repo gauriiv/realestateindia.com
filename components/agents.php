@@ -56,27 +56,31 @@
                     </div>
                 </div>
             </div>
+            <!-- Agent 3 (Viri) -->
             <div class="agent-card">
                 <div class="agent-profile">
-                    <img src= "https://images.unsplash.com/photo-1780396508935-94e234affc92?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-</div>
-<div class="agent_details">
-    <h4>Viri Sharmav</h4>
-    <p class="agent_firm">Viri Associates</p>
-    <div class="agent_rating">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <span>(2105 Reviews)</span>
-</div>
-<p class ="agent-loc"><i class="fa-solid fa-location-dot"></i> hassanpur</p>
-<div class="agent-actions">
-    <button class="agent-btn call-btn"><i class="fa-solid fa-phone"></i> Contact</button>
-    <button class="agent-btn message-btn"><i class="fa-regular fa-envelope"></i> Message</button>
-</div>
-            <!-- Agent 3 -->
+                    <img src="https://images.unsplash.com/photo-1780396508935-94e234affc92?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Viri Sharmav">
+                </div>
+                <div class="agent-details">
+                    <h4>Viri Sharmav</h4>
+                    <p class="agent-firm">Viri Associates</p>
+                    <div class="agent-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(2105 Reviews)</span>
+                    </div>
+                    <p class="agent-loc"><i class="fa-solid fa-location-dot"></i> Hassanpur</p>
+                    <div class="agent-actions">
+                        <button class="agent-btn call-btn"><i class="fa-solid fa-phone"></i> Contact</button>
+                        <button class="agent-btn message-btn"><i class="fa-regular fa-envelope"></i> Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent 4 -->
             <div class="agent-card">
                 <div class="agent-profile">
                     <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" alt="Amit Patel">
