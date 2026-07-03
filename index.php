@@ -3,6 +3,7 @@
 <!-- Include Modals CSS early so it's loaded before interaction -->
 <link rel="stylesheet" href="assets/css/modals.css">
 <link rel="stylesheet" href="assets/css/agents.css">
+<link rel="stylesheet" href="assets/css/hero.css">
 
 <!-- Main Homepage Sections -->
 <main>
