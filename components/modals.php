@@ -126,5 +126,71 @@
         if (event.target == modal) {
             closeSignInModal();
         }
+        if (event.target == document.getElementById('propertyModal')) {
+            closePropertyModal();
+        }
+    }
+</script>
+
+<!-- Dynamic Property Details Modal -->
+<div id="propertyModal" class="modal-overlay">
+    <div class="modal-content property-modal-content">
+        <span class="close-modal" onclick="closePropertyModal()">&times;</span>
+        
+        <div class="prop-modal-layout">
+            <div class="prop-modal-image-col">
+                <img id="pm-img" src="" alt="Property Image">
+            </div>
+            <div class="prop-modal-info-col">
+                <h2 id="pm-title">Property Title</h2>
+                <p class="pm-loc"><i class="fa-solid fa-location-dot"></i> <span id="pm-loc-text">Location, City</span></p>
+                <div class="pm-price-row">
+                    <span class="pm-price" id="pm-price">₹ 0</span>
+                </div>
+                
+                <div class="pm-specs-grid">
+                    <div class="pm-spec">
+                        <i class="fa-solid fa-bed"></i>
+                        <div>
+                            <span>Area/Type</span>
+                            <strong id="pm-area">2 BHK</strong>
+                        </div>
+                    </div>
+                    <div class="pm-spec">
+                        <i class="fa-solid fa-map-pin"></i>
+                        <div>
+                            <span>Nearby</span>
+                            <strong id="pm-nearby">Metro Station</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pm-actions">
+                    <button class="modal-primary-btn contact-btn"><i class="fa-solid fa-phone"></i> Contact Dealer/Owner</button>
+                    <button class="modal-primary-btn outline-btn"><i class="fa-regular fa-envelope"></i> Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const propModal = document.getElementById('propertyModal');
+    
+    function openPropertyModal(data) {
+        document.getElementById('pm-img').src = data.img;
+        document.getElementById('pm-title').innerText = data.title;
+        document.getElementById('pm-loc-text').innerText = data.location;
+        document.getElementById('pm-price').innerText = data.price;
+        document.getElementById('pm-area').innerText = data.area;
+        document.getElementById('pm-nearby').innerText = data.nearby;
+        
+        propModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePropertyModal() {
+        propModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
     }
 </script>

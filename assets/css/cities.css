@@ -1,7 +1,7 @@
 /* Cities Section Styles */
 .cities-section {
     padding: 60px 0;
-    background-color: #fff;
+    background-color: #fff8eb; /* Very light orange */
 }
 
 .section-container {
@@ -24,10 +24,10 @@
 }
 
 .cities-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
     justify-content: center;
-    gap: 30px;
+    gap: 8px; /* small gap for closest fit */
 }
 
 .city-card {
@@ -36,32 +36,90 @@
     align-items: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    width: 120px;
+    width: 105px;
 }
 
 .city-card:hover {
     transform: translateY(-5px);
 }
 
-.city-img-wrapper {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
+.city-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 32px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.city-card:hover .city-icon {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.city-emoji-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
     margin-bottom: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
 }
 
-.city-card:hover .city-img-wrapper {
-    box-shadow: 0 10px 25px rgba(29, 112, 184, 0.3);
-    transform: scale(1.05);
+.city-card:hover .city-emoji-wrapper {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
 }
 
-.city-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Subtly colored backgrounds */
+.city-emoji-wrapper.color-1 { background-color: #e3f2fd; color: #1d70b8; }
+.city-emoji-wrapper.color-2 { background-color: #fff3e0; color: #e65100; }
+.city-emoji-wrapper.color-3 { background-color: #e8f5e9; color: #2e7d32; }
+.city-emoji-wrapper.color-4 { background-color: #f3e5f5; color: #6a1b9a; }
+.city-emoji-wrapper.color-5 { background-color: #fffde7; color: #f57f17; }
+.city-emoji-wrapper.color-6 { background-color: #eceff1; color: #455a64; }
+.city-emoji-wrapper.color-7 { background-color: #e0f7fa; color: #00838f; }
+.city-emoji-wrapper.color-8 { background-color: #fbe9e7; color: #d84315; }
+
+/* Discover Buttons Styles */
+.discover-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.discover-btn {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discover-btn i {
+    color: #1d70b8;
+    font-size: 16px;
+}
+
+.discover-btn:hover {
+    background: #f0f7fc;
+    border-color: #1d70b8;
+    color: #1d70b8;
 }
 
 .city-name {

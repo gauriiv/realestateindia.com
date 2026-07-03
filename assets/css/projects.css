@@ -1,7 +1,7 @@
 /* Projects Section Styles */
 .projects-section {
     padding: 60px 0;
-    background-color: #fff;
+    background-color: #f0f8ff; /* Light blue background */
 }
 
 .projects-section .section-title {
@@ -24,10 +24,22 @@
     font-size: 15px;
 }
 
+.projects-ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
 .projects-carousel {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    white-space: nowrap;
+    animation: projects-ticker 8s linear infinite;
     gap: 25px;
+}
+
+.projects-carousel:hover {
+    animation-play-state: paused;
 }
 
 .project-card {
@@ -37,6 +49,7 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     transition: all 0.4s ease;
     cursor: pointer;
+    min-width: 280px;
 }
 
 .project-card:hover {
@@ -141,12 +154,17 @@
 
 @media (max-width: 1024px) {
     .projects-carousel {
-        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns removed due to flex layout */
     }
 }
 
 @media (max-width: 600px) {
     .projects-carousel {
-        grid-template-columns: 1fr;
+        /* grid-template-columns removed due to flex layout */
     }
+}
+
+@keyframes projects-ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }

@@ -19,27 +19,23 @@ html {
 body {
     margin: 0;
     font-family: var(--font-inter);
-<<<<<<< HEAD
     /* Subtle Continuous Animated Background */
     background: linear-gradient(-45deg, #f0f7fc, #e8f5e9, #fdfbf7, #f4f9f9);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    min-height: 100vh;
+    min-height: 300vh;
+    overflow-x: hidden;
 }
 
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-=======
-    background-color: #f8f9fa;
-    overflow-x: hidden;
->>>>>>> 204f04a4a77c1126bc475c447d0e6156d8a1cbc1
 }
 
 .main-header {
     background-color: var(--header-bg);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 5px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -341,4 +337,76 @@ body {
         transform: scale(4);
         opacity: 0;
     }
+}
+
+/* Property Ticker Styles */
+.property-ticker-wrap {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 6px 0;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 2px solid var(--primary-blue);
+    display: flex;
+    align-items: center;
+}
+
+.property-ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 30s linear infinite;
+}
+
+.property-ticker:hover {
+    animation-play-state: paused;
+}
+
+.ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 50px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.ticker-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.ticker-item strong {
+    color: var(--badge-yellow);
+}
+
+@keyframes ticker {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* Star Click Animation */
+.nav-item {
+    position: relative;
+}
+
+.nav-item.star-anim-active::after {
+    content: '✨🌟✨';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    white-space: nowrap;
+    animation: stars-spin 3s linear;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+@keyframes stars-spin {
+    0% { transform: translateX(-50%) rotate(0deg) scale(1); opacity: 1; }
+    50% { transform: translateX(-50%) rotate(180deg) scale(1.5); opacity: 0.8; }
+    100% { transform: translateX(-50%) rotate(360deg) scale(0); opacity: 0; }
 }

@@ -1,0 +1,98 @@
+/* CSS for the new Services Page */
+.services-page {
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 300px);
+    padding-bottom: 80px;
+}
+
+.sp-hero {
+    background: linear-gradient(135deg, #1d70b8 0%, #155a96 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sp-hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.sp-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sp-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.sp-option-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.sp-option-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: #1d70b8;
+}
+
+.sp-option-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background: #f0f7fc;
+    border-radius: 50%;
+    color: #1d70b8;
+}
+
+.sp-option-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.sp-option-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sp-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: transparent;
+    color: #1d70b8;
+    border: 2px solid #1d70b8;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sp-option-card:hover .sp-btn {
+    background-color: #1d70b8;
+    color: white;
+}

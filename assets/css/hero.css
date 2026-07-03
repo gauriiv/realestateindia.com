@@ -142,7 +142,7 @@
 
 /* 4. Tab Navigation Layout */
 .hero-tabs-wrapper {
-    width: 100%;
+    width: 60%;
     margin-bottom: -1px;
     z-index: 3;
 }

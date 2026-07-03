@@ -13,6 +13,51 @@
 <body>
 
 <header class="main-header">
+    <div class="property-ticker-wrap">
+        <div class="property-ticker">
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Luxury Villa</strong> in Mumbai | 2,500 sq.ft | ₹ 2.5 Cr</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Modern Apartment</strong> in Bangalore | 1,200 sq.ft | ₹ 85 Lacs</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Penthouse</strong> in Gurgaon | 3,200 sq.ft | ₹ 4.0 Cr</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Studio Flat</strong> in Pune | 500 sq.ft | ₹ 35 Lacs</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18efc2291?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Independent House</strong> in Delhi | 1,800 sq.ft | ₹ 1.5 Cr</span>
+            </div>
+            <!-- Duplicate for continuous scroll effect -->
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Luxury Villa</strong> in Mumbai | 2,500 sq.ft | ₹ 2.5 Cr</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Modern Apartment</strong> in Bangalore | 1,200 sq.ft | ₹ 85 Lacs</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Penthouse</strong> in Gurgaon | 3,200 sq.ft | ₹ 4.0 Cr</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Studio Flat</strong> in Pune | 500 sq.ft | ₹ 35 Lacs</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18efc2291?w=50&h=50&fit=crop" alt="Property">
+                <span><strong>Independent House</strong> in Delhi | 1,800 sq.ft | ₹ 1.5 Cr</span>
+            </div>
+        </div>
+    </div>
     <div class="header-container">
         <!-- Logo Section -->
         <div class="header-left">
@@ -33,42 +78,43 @@
                 <li class="nav-item has-dropdown">
                     <a href="#">Buy <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="#">Ready to Move</a></li>
-                        <li><a href="#">Under Construction</a></li>
-                        <li><a href="#">Plots/Land</a></li>
+                        <li><a href="#">Properties for Sale</a></li>
+                        <li><a href="#">New Projects</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <a href="#">Rent <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#">Rents <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="#">Flats for Rent</a></li>
-                        <li><a href="#">Houses/Villas</a></li>
-                        <li><a href="#">PG/Co-living</a></li>
+                        <li><a href="#">Residential Rent</a></li>
+                        <li><a href="#">Commercial Rent</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#">Projects <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="#">New Launches</a></li>
                         <li><a href="#">Upcoming Projects</a></li>
-                        <li><a href="#">Luxury Projects</a></li>
+                        <li><a href="#">Top Builders</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#">Valuation <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Property Calculator</a></li>
+                        <li><a href="#">Market Trends</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#">List Property <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Post Free Ad</a></li>
+                        <li><a href="#">Seller Services</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#">Agents <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="#">Find an Agent</a></li>
-                        <li><a href="#">Top Rated Dealers</a></li>
-                        <li><a href="#">Agent Registration</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown">
-                        <li><a href="#">Home Loans</a></li>
-                        <li><a href="#">Interior Design</a></li>
-                        <li><a href="#">Legal Services</a></li>
-                        <li><a href="#">Property Valuation</a></li>
+                        <li><a href="#">Join as Agent</a></li>
                     </ul>
                 </li>
             </ul>
@@ -105,5 +151,24 @@
 
     mobileMenuBtn.addEventListener("click", () => {
         headerNav.classList.toggle("active");
+    });
+
+    const navItems = document.querySelectorAll(".nav-item > a");
+    navItems.forEach(item => {
+        item.addEventListener("click", function(e) {
+            e.preventDefault();
+            const parentLi = this.parentElement;
+            
+            // Remove active class from all
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('star-anim-active'));
+            
+            // Add to current
+            parentLi.classList.add('star-anim-active');
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                parentLi.classList.remove('star-anim-active');
+            }, 3000);
+        });
     });
 </script>
