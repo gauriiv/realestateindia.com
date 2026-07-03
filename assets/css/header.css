@@ -1,4 +1,8 @@
 /* Header CSS */
+html {
+    overflow-x: hidden;
+}
+
 :root {
     --header-bg: #ffffff;
     --text-primary: #333333;
@@ -15,6 +19,7 @@
 body {
     margin: 0;
     font-family: var(--font-inter);
+<<<<<<< HEAD
     /* Subtle Continuous Animated Background */
     background: linear-gradient(-45deg, #f0f7fc, #e8f5e9, #fdfbf7, #f4f9f9);
     background-size: 400% 400%;
@@ -26,6 +31,10 @@ body {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+=======
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+>>>>>>> 204f04a4a77c1126bc475c447d0e6156d8a1cbc1
 }
 
 .main-header {
