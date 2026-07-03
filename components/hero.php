@@ -100,8 +100,17 @@
                 </button>
             </div>
         </div>
+        <!-- Trending Searches -->
+        <div class="trending-searches">
+            <span class="trending-label">Trending Searches:</span>
+            <a href="#" class="trending-pill">DLF <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="#" class="trending-pill">Sector 56 <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="#" class="trending-pill">Sector 46 <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="#" class="trending-pill">Sector 65 <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="#" class="trending-pill">Sector 43 <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
     </div>
-</section>n>
+</section>
 
 <!-- Ask AI Dialog Modal -->
 <div class="ask-ai-modal-overlay" id="askAiModal">

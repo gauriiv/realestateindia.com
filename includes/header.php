@@ -32,7 +32,7 @@
                 <span><strong>Studio Flat</strong> in Pune | 500 sq.ft | ₹ 35 Lacs</span>
             </div>
             <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1600566753086-00f18efc2291?w=50&h=50&fit=crop" alt="Property">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=50&h=50&fit=crop" alt="Property">
                 <span><strong>Independent House</strong> in Delhi | 1,800 sq.ft | ₹ 1.5 Cr</span>
             </div>
             <!-- Duplicate for continuous scroll effect -->
@@ -53,7 +53,7 @@
                 <span><strong>Studio Flat</strong> in Pune | 500 sq.ft | ₹ 35 Lacs</span>
             </div>
             <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1600566753086-00f18efc2291?w=50&h=50&fit=crop" alt="Property">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=50&h=50&fit=crop" alt="Property">
                 <span><strong>Independent House</strong> in Delhi | 1,800 sq.ft | ₹ 1.5 Cr</span>
             </div>
         </div>

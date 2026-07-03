@@ -1,313 +1,95 @@
 /* Cities Section Styles */
 .cities-section {
-    padding: 60px 0;
-    background-color: #fff;
+    padding: 60px 20px;
+    background-color: #f5f5f5; /* Uniform page background */
 }
 
 .section-container {
-    width: 95%;
-    max-width: 1300px;
+    max-width: 1150px;
     margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: 400;
-    color: #333;
-    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 8px;
+    margin-top: 0;
 }
 
-.section-title span {
-    font-weight: 600;
-    color: #1d70b8; /* Lighter theme on highlight keywords */
+.section-subtitle {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 35px;
+    line-height: 1.5;
 }
 
 .cities-grid {
     display: grid;
-    grid-template-columns: repeat(4, max-content);
-    justify-content: center;
-    gap: 8px; /* small gap for closest fit */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
 }
 
 .city-card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    width: 105px;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    background-color: #fff;
+    height: 70px; /* Fixed height to match screenshot precisely */
 }
 
 .city-card:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border-color: #d8d8d8;
 }
 
-.city-icon {
-    width: 65px;
-    height: 65px;
-    border-radius: 12px;
+.city-icon-container {
+    width: 90px; /* Fixed width for the icon box */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    border-right: 1px solid #eaeaea;
     font-size: 32px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
 }
 
-.city-card:hover .city-icon {
-    transform: scale(1.15) rotate(5deg);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.city-emoji-wrapper {
-    width: 90px;
-    height: 90px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
+.city-name-container {
+    flex-grow: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 40px;
-}
-
-.city-card:hover .city-emoji-wrapper {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    transform: translateY(-5px);
-}
-
-/* Subtly colored backgrounds */
-.city-emoji-wrapper.color-1 { background-color: #e3f2fd; color: #1d70b8; }
-.city-emoji-wrapper.color-2 { background-color: #fff3e0; color: #e65100; }
-.city-emoji-wrapper.color-3 { background-color: #e8f5e9; color: #2e7d32; }
-.city-emoji-wrapper.color-4 { background-color: #f3e5f5; color: #6a1b9a; }
-.city-emoji-wrapper.color-5 { background-color: #fffde7; color: #f57f17; }
-.city-emoji-wrapper.color-6 { background-color: #eceff1; color: #455a64; }
-.city-emoji-wrapper.color-7 { background-color: #e0f7fa; color: #00838f; }
-.city-emoji-wrapper.color-8 { background-color: #fbe9e7; color: #d84315; }
-
-/* Discover Buttons Styles */
-.discover-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.discover-btn {
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    background: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #555;
-    text-align: left;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.discover-btn i {
-    color: #1d70b8;
-    font-size: 16px;
-}
-
-.discover-btn:hover {
-    background: #f0f7fc;
-    border-color: #1d70b8;
-    color: #1d70b8;
+    padding-left: 20px;
 }
 
 .city-name {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 5px;
-    transition: color 0.3s;
-}
-
-.city-card:hover .city-name {
-    color: #1d70b8; /* Lighter theme on hover */
-}
-
-.city-props {
-    font-size: 12px;
-    color: #888;
-}
-
-/* Expandable Panel */
-.city-property-panel {
-    background-color: #f4f8fb;
-    border: 1px solid #cce1f0;
-    border-radius: 12px;
-    padding: 30px;
-    margin-top: 40px;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    position: relative;
-}
-
-.city-property-panel.active {
-    display: block;
-    animation: fadeIn 0.4s forwards;
-}
-
-.panel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #dce8f0;
-}
-
-.panel-header h3 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 400;
-    color: #333;
-}
-
-.panel-header h3 span {
-    font-weight: 600;
-    color: #1d70b8;
-}
-
-.close-panel {
-    font-size: 24px;
-    color: #999;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.close-panel:hover {
-    color: #333;
-}
-
-.panel-layout {
-    display: flex;
-    gap: 40px;
-}
-
-.panel-left, .panel-right {
-    flex: 1;
-}
-
-.panel-left h4, .panel-right h4 {
-    margin: 0 0 15px 0;
-    font-size: 16px;
-    color: #555;
-}
-
-/* Toggle Buttons */
-.toggle-buttons {
-    display: flex;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    overflow: hidden;
-    width: fit-content;
-}
-
-.tgl-btn {
-    padding: 10px 30px;
-    border: none;
-    background: transparent;
-    font-weight: 600;
     font-size: 14px;
-    color: #555;
-    cursor: pointer;
-    transition: all 0.3s;
+    font-weight: 400; /* Normal weight */
+    color: #333;
+    margin: 0;
 }
 
-.tgl-btn.active {
-    background: #1d70b8;
-    color: #fff;
-}
-
-/* Category Buttons */
-.category-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.cat-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 15px 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s;
-    min-width: 100px;
-}
-
-.cat-btn i {
-    font-size: 24px;
-    color: #888;
-    transition: color 0.3s;
-}
-
-.cat-btn span {
-    font-size: 13px;
-    font-weight: 500;
-    color: #555;
-}
-
-.cat-btn:hover {
-    border-color: #1d70b8;
-    box-shadow: 0 4px 10px rgba(29, 112, 184, 0.1);
-}
-
-.cat-btn.active {
-    border-color: #1d70b8;
-    background: #f0f7fc;
-}
-
-.cat-btn.active i {
-    color: #1d70b8;
-}
-
-.cat-btn.active span {
-    color: #1d70b8;
-}
-
-.panel-action {
-    margin-top: 30px;
-    text-align: right;
-}
-
-.view-properties-btn {
-    background: #ea4335;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.3s;
-}
-
-.view-properties-btn:hover {
-    background: #c53024;
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .cities-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-    .panel-layout {
-        flex-direction: column;
-        gap: 25px;
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .section-container {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cities-grid {
+        grid-template-columns: 1fr;
     }
 }

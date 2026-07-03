@@ -2,57 +2,121 @@
 
 <section class="services-section">
     <div class="section-container">
-        <h2 class="section-title"> <span>Premier Property</span> SERVICES</h2>
-        <p class="section-subtitle">Everything you need for your property journey, all in one place.</p>
+        <h2 class="section-title">Everything you Need at One Place</h2>
         
-        <div class="services-grid">
-            <div class="service-card color-1" onclick="window.location.href='services.php?type=Agents'">
-                <div class="service-icon">👨‍💼</div>
-                <h4 class="service-title">Agent Services</h4>
-                <p class="service-desc">Find trusted agents to help you buy or sell.</p>
+        <div class="services-tabs">
+            <button class="tab-btn active" data-target="tab-buyers">For Buyers / Owners</button>
+            <button class="tab-btn" data-target="tab-tenants">For Tenants</button>
+            <button class="tab-btn" data-target="tab-agents">For Agents</button>
+            <button class="tab-btn" data-target="tab-builders">For Builders & Banks</button>
+        </div>
+        
+        <!-- Buyers / Owners Tab -->
+        <div class="services-content-box" id="tab-buyers">
+            <div class="service-item">
+                <div class="service-icon">💸</div>
+                <h4 class="service-title">Home Loan</h4>
             </div>
-            
-            <div class="service-card color-2" onclick="window.location.href='services.php?type=Builders'">
-                <div class="service-icon">👷</div>
-                <h4 class="service-title">Builders</h4>
-                <p class="service-desc">Connect with top developers for new projects.</p>
-            </div>
-            
-            <div class="service-card color-3" onclick="window.location.href='services.php?type=Architecture'">
-                <div class="service-icon">📐</div>
-                <h4 class="service-title">Architecture</h4>
-                <p class="service-desc">Get professional architectural designs.</p>
-            </div>
-            
-            <div class="service-card color-4" onclick="window.location.href='services.php?type=Interior'">
+            <div class="service-item">
                 <div class="service-icon">🛋️</div>
-                <h4 class="service-title">Interior Design</h4>
-                <p class="service-desc">Decorate your dream home with experts.</p>
+                <h4 class="service-title">Home Interior Design</h4>
             </div>
-            
-            <div class="service-card color-5" onclick="window.location.href='services.php?type=Vastu'">
+            <div class="service-item">
+                <div class="service-icon">📊</div>
+                <h4 class="service-title">Valuation</h4>
+            </div>
+            <div class="service-item">
                 <div class="service-icon">🧭</div>
-                <h4 class="service-title">Vastu Consultants</h4>
-                <p class="service-desc">Ensure harmony and prosperity in your home.</p>
+                <h4 class="service-title">Vastu Calculator</h4>
             </div>
-            
-            <div class="service-card color-6" onclick="window.location.href='services.php?type=Contractors'">
-                <div class="service-icon">🧱</div>
-                <h4 class="service-title">Building Contractor</h4>
-                <p class="service-desc">Hire reliable contractors for construction.</p>
+            <div class="service-item">
+                <div class="service-icon">🏠</div>
+                <h4 class="service-title">Property Management</h4>
             </div>
-            
-            <div class="service-card color-7" onclick="window.location.href='services.php?type=Inspection'">
-                <div class="service-icon">🔍</div>
-                <h4 class="service-title">Home Inspection</h4>
-                <p class="service-desc">Get property evaluated before making a deal.</p>
+            <div class="service-item">
+                <div class="service-icon">🏘️</div>
+                <h4 class="service-title">Sell or Rent Property</h4>
             </div>
-            
-            <div class="service-card color-8" onclick="window.location.href='services.php?type=Consultants'">
+        </div>
+
+        <!-- Tenants Tab -->
+        <div class="services-content-box" id="tab-tenants" style="display: none;">
+            <div class="service-item">
+                <div class="service-icon">📄</div>
+                <h4 class="service-title">Online Rent Agreement</h4>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🧾</div>
+                <h4 class="service-title">Rent Receipts</h4>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🏠</div>
+                <h4 class="service-title">Property Management</h4>
+            </div>
+        </div>
+
+        <!-- Agents Tab -->
+        <div class="services-content-box" id="tab-agents" style="display: none;">
+            <div class="service-item">
+                <div class="service-icon">📢</div>
+                <h4 class="service-title">List Property With Us</h4>
+            </div>
+            <div class="service-item">
                 <div class="service-icon">🤝</div>
-                <h4 class="service-title">Property Consultants</h4>
-                <p class="service-desc">Expert legal and investment advice.</p>
+                <h4 class="service-title">Co-Broking For New Projects</h4>
+            </div>
+        </div>
+
+        <!-- Builders & Banks Tab -->
+        <div class="services-content-box" id="tab-builders" style="display: none;">
+            <div class="service-item">
+                <div class="service-icon">📢</div>
+                <h4 class="service-title">Advertise With Us</h4>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🕶️</div>
+                <h4 class="service-title">3D/AR/VR Services</h4>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🧠</div>
+                <h4 class="service-title">Data Intelligence</h4>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">📝</div>
+                <h4 class="service-title">Mortgage Partnerships</h4>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🤖</div>
+                <h4 class="service-title">Super Agent Pro</h4>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.services-content-box');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tab
+            tab.classList.add('active');
+
+            // Hide all content boxes
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Show target content box
+            const targetId = tab.getAttribute('data-target');
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.style.display = 'grid';
+            }
+        });
+    });
+});
+</script>
