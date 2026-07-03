@@ -10,7 +10,7 @@
 
         <div class="agents-grid">
             <!-- Agent 1 -->
-            <div class="agent-card">
+            <div class="agent-card" onclick="window.location.href='agent_profile.php?name=Rajesh Kumar'" style="cursor: pointer;">
                 <div class="agent-profile">
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="Rajesh Kumar">
                 </div>
@@ -27,14 +27,14 @@
                     </div>
                     <p class="agent-loc"><i class="fa-solid fa-location-dot"></i> Andheri West, Mumbai</p>
                     <div class="agent-actions">
-                        <button class="agent-btn call-btn"><i class="fa-solid fa-phone"></i> Contact</button>
-                        <button class="agent-btn message-btn"><i class="fa-regular fa-envelope"></i> Message</button>
+                        <button class="agent-btn call-btn" onclick="event.stopPropagation();"><i class="fa-solid fa-phone"></i> Contact</button>
+                        <button class="agent-btn message-btn" onclick="event.stopPropagation();"><i class="fa-regular fa-envelope"></i> Message</button>
                     </div>
                 </div>
             </div>
 
             <!-- Agent 2 -->
-            <div class="agent-card">
+            <div class="agent-card" onclick="window.location.href='agent_profile.php?name=Priya Sharma'" style="cursor: pointer;">
                 <div class="agent-profile">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Priya Sharma">
                 </div>
@@ -51,13 +51,14 @@
                     </div>
                     <p class="agent-loc"><i class="fa-solid fa-location-dot"></i> Dwarka, New Delhi</p>
                     <div class="agent-actions">
-                        <button class="agent-btn call-btn"><i class="fa-solid fa-phone"></i> Contact</button>
-                        <button class="agent-btn message-btn"><i class="fa-regular fa-envelope"></i> Message</button>
+                        <button class="agent-btn call-btn" onclick="event.stopPropagation();"><i class="fa-solid fa-phone"></i> Contact</button>
+                        <button class="agent-btn message-btn" onclick="event.stopPropagation();"><i class="fa-regular fa-envelope"></i> Message</button>
                     </div>
                 </div>
             </div>
+            
             <!-- Agent 3 (Viri) -->
-            <div class="agent-card">
+            <div class="agent-card" onclick="window.location.href='agent_profile.php?name=Viri Sharmav'" style="cursor: pointer;">
                 <div class="agent-profile">
                     <img src="https://images.unsplash.com/photo-1780396508935-94e234affc92?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Viri Sharmav">
                 </div>
@@ -74,14 +75,14 @@
                     </div>
                     <p class="agent-loc"><i class="fa-solid fa-location-dot"></i> Hassanpur</p>
                     <div class="agent-actions">
-                        <button class="agent-btn call-btn"><i class="fa-solid fa-phone"></i> Contact</button>
-                        <button class="agent-btn message-btn"><i class="fa-regular fa-envelope"></i> Message</button>
+                        <button class="agent-btn call-btn" onclick="event.stopPropagation();"><i class="fa-solid fa-phone"></i> Contact</button>
+                        <button class="agent-btn message-btn" onclick="event.stopPropagation();"><i class="fa-regular fa-envelope"></i> Message</button>
                     </div>
                 </div>
             </div>
 
             <!-- Agent 4 -->
-            <div class="agent-card">
+            <div class="agent-card" onclick="window.location.href='agent_profile.php?name=Amit Patel'" style="cursor: pointer;">
                 <div class="agent-profile">
                     <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" alt="Amit Patel">
                 </div>
@@ -98,14 +99,14 @@
                     </div>
                     <p class="agent-loc"><i class="fa-solid fa-location-dot"></i> SG Highway, Ahmedabad</p>
                     <div class="agent-actions">
-                        <button class="agent-btn call-btn"><i class="fa-solid fa-phone"></i> Contact</button>
-                        <button class="agent-btn message-btn"><i class="fa-regular fa-envelope"></i> Message</button>
+                        <button class="agent-btn call-btn" onclick="event.stopPropagation();"><i class="fa-solid fa-phone"></i> Contact</button>
+                        <button class="agent-btn message-btn" onclick="event.stopPropagation();"><i class="fa-regular fa-envelope"></i> Message</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Agent 4 -->
-            <div class="agent-card">
+            <!-- Agent 5 -->
+            <div class="agent-card" onclick="window.location.href='agent_profile.php?name=Neha Gupta'" style="cursor: pointer;">
                 <div class="agent-profile">
                     <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=150&q=80" alt="Neha Gupta">
                 </div>
@@ -122,8 +123,8 @@
                     </div>
                     <p class="agent-loc"><i class="fa-solid fa-location-dot"></i> Koregaon Park, Pune</p>
                     <div class="agent-actions">
-                        <button class="agent-btn call-btn"><i class="fa-solid fa-phone"></i> Contact</button>
-                        <button class="agent-btn message-btn"><i class="fa-regular fa-envelope"></i> Message</button>
+                        <button class="agent-btn call-btn" onclick="event.stopPropagation();"><i class="fa-solid fa-phone"></i> Contact</button>
+                        <button class="agent-btn message-btn" onclick="event.stopPropagation();"><i class="fa-regular fa-envelope"></i> Message</button>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,240 @@
+/* Agent Profile Page CSS */
+.agent-profile-page {
+    background-color: hwb(0 96% 2%);
+    padding: 60px 20px;
+    min-height: calc(100vh - 200px);
+}
+
+.ap-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+/* Left Sidebar */
+.ap-sidebar {
+    width: 350px;
+    background: hsla(0, 0%, 100%, 0.968);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+}
+
+.ap-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    border: 4px solid #f0f7fc;
+}
+
+.ap-sidebar h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.ap-firm {
+    color: #ea4335;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.ap-rating {
+    color: #ffc107;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.ap-rating span {
+    color: #666;
+    margin-left: 5px;
+}
+
+.ap-contact-info {
+    text-align: left;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.ap-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 15px;
+}
+
+.ap-contact-item i {
+    color: #1d70b8;
+    background: #f0f7fc;
+    padding: 10px;
+    border-radius: 50%;
+    width: 15px;
+    text-align: center;
+}
+
+.ap-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.ap-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.ap-btn-primary {
+    background: #1d70b8;
+    color: white;
+}
+
+.ap-btn-primary:hover {
+    background: #155a96;
+}
+
+.ap-btn-outline {
+    background: transparent;
+    color: #1d70b8;
+    border: 1px solid #1d70b8;
+}
+
+.ap-btn-outline:hover {
+    background: #f0f7fc;
+}
+
+/* Right Content */
+.ap-content {
+    flex: 1;
+}
+
+.ap-about {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.ap-about h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.ap-about p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.ap-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.ap-stat {
+    text-align: center;
+}
+
+.ap-stat h4 {
+    font-size: 24px;
+    color: #1d70b8;
+    margin: 0 0 5px 0;
+}
+
+.ap-stat span {
+    color: #777;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.ap-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Reusing result card styles from properties.css for consistency but inside agent profile */
+.ap-project-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.ap-project-img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ap-project-details {
+    padding: 15px;
+}
+
+.ap-project-details h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.ap-project-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ea4335;
+    margin-bottom: 10px;
+}
+
+.ap-project-loc {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.ap-project-btn {
+    width: 100%;
+    padding: 8px;
+    background: #f0f7fc;
+    color: #1d70b8;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .ap-container {
+        flex-direction: column;
+    }
+    .ap-sidebar {
+        width: 100%;
+        position: static;
+        box-sizing: border-box;
+    }
+    .ap-projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
