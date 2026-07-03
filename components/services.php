@@ -2,7 +2,7 @@
 
 <section class="services-section">
     <div class="section-container">
-        <h2 class="section-title">Explore Our <span>Real Estate Services</span></h2>
+        <h2 class="section-title"> <span>Prem</span></h2>
         <p class="section-subtitle">Everything you need for your property journey, all in one place.</p>
         
         <div class="services-grid">

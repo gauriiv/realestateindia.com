@@ -21,7 +21,8 @@
                 ['name' => 'Surat', 'props' => '14101', 'img' => 'https://images.unsplash.com/photo-1616145610811-1335b2e9e208?auto=format&fit=crop&w=150&q=80'],
                 ['name' => 'Chandigarh', 'props' => '12050', 'img' => 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=150&q=80'],
                 ['name' => 'Indore', 'props' => '10444', 'img' => 'https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?auto=format&fit=crop&w=150&q=80'],
-                ['name' => 'Kochi', 'props' => '8920', 'img' => 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=150&q=80']
+                ['name' => 'Kochi', 'props' => '8920', 'img' => 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=150&q=80'],
+                ['name' => 'Sohna', 'props'=> '99999','img'=> 'https://unsplash.com/photos/a-view-of-a-hill-through-a-window-Q9bAHxocNDw']
             ];
 
             foreach($cities as $index => $city) {

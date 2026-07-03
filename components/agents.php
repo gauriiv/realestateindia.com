@@ -5,7 +5,7 @@
                 <h2 class="section-title">Top Real Estate Agents <span>Near You</span></h2>
                 <p class="section-subtitle">Connect with verified property dealers and experts in your locality.</p>
             </div>
-            <button class="view-all-agents">View All Agents <i class="fa-solid fa-arrow-right"></i></button>
+            <a href="all_agents.php" class="view-all-agents" style="text-decoration: none; display: inline-block; text-align: center;">View All Agents <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
         <div class="agents-grid">
