@@ -1,0 +1,245 @@
+/* ==========================================
+   RealEstateIndia - In Your Pocket Section
+   ========================================== */
+
+.in-your-pocket-section {
+    background: linear-gradient(100deg, #345482 0%, #152a54 70%);
+    padding: 10px 24px;
+    font-family: 'Inter', sans-serif;
+    position: relative; 
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.pocket-container {
+    max-width: 1200px;
+    margin: 100 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 8;
+}
+
+.pocket-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.pocket-title {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 16px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.pocket-subtitle {
+    font-size: 18px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.pocket-subtitle .highlight {
+    color: #ffe100;
+    font-weight: 700;
+}
+
+.pocket-form {
+    margin-bottom: 32px;
+}
+
+.pocket-form .input-group {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 8px;
+    max-width: 450px;
+}
+
+.mobile-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.mobile-input::placeholder {
+    color: #94a3b8;
+}
+
+.btn-send-link {
+    background: #ffe100;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 14px rgba(255, 225, 0, 0.25);
+}
+
+.btn-send-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 225, 0, 0.4);
+    background: #ffd30c;
+}
+
+.pocket-download-actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.store-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.store-btn:hover {
+    transform: translateY(-2px);
+    background: #111111;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.store-btn i {
+    font-size: 24px;
+}
+
+.store-btn .store-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.store-btn .small-text {
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #cbd5e1;
+}
+
+.store-btn .large-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.qr-code-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.qr-text {
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.4;
+}
+
+.qr-image {
+    background: #ffffff;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f172a;
+    font-size: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pocket-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 500px;
+}
+
+.glow-effect {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ffe100;
+    filter: blur(150px);
+    opacity: 0.15;
+    border-radius: 50%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.phone-mockup-img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    z-index: 2;
+    position: relative;
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease;
+}
+
+.pocket-image-wrapper:hover .phone-mockup-img {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+@media (max-width: 992px) {
+    .pocket-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pocket-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pocket-download-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .store-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .store-btn {
+        justify-content: center;
+    }
+    
+    .qr-code-box {
+        display: none;
+    }
+}

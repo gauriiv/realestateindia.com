@@ -13,51 +13,11 @@
 <body>
 
 <header class="main-header">
-    <div class="property-ticker-wrap">
-        <div class="property-ticker">
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Luxury Villa</strong> in Mumbai | 2,500 sq.ft | ₹ 2.5 Cr</span>
-            </div>
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Modern Apartment</strong> in Bangalore | 1,200 sq.ft | ₹ 85 Lacs</span>
-            </div>
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Penthouse</strong> in Gurgaon | 3,200 sq.ft | ₹ 4.0 Cr</span>
-            </div>
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Studio Flat</strong> in Pune | 500 sq.ft | ₹ 35 Lacs</span>
-            </div>
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Independent House</strong> in Delhi | 1,800 sq.ft | ₹ 1.5 Cr</span>
-            </div>
-            <!-- Duplicate for continuous scroll effect -->
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Luxury Villa</strong> in Mumbai | 2,500 sq.ft | ₹ 2.5 Cr</span>
-            </div>
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Modern Apartment</strong> in Bangalore | 1,200 sq.ft | ₹ 85 Lacs</span>
-            </div>
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Penthouse</strong> in Gurgaon | 3,200 sq.ft | ₹ 4.0 Cr</span>
-            </div>
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Studio Flat</strong> in Pune | 500 sq.ft | ₹ 35 Lacs</span>
-            </div>
-            <div class="ticker-item">
-                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=50&h=50&fit=crop" alt="Property">
-                <span><strong>Independent House</strong> in Delhi | 1,800 sq.ft | ₹ 1.5 Cr</span>
-            </div>
-        </div>
-    </div>
+    
+       
+          
+        
+    
     <div class="header-container">
         <!-- Logo Section -->
         <div class="header-left">
