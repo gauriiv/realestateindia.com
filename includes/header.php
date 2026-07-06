@@ -12,6 +12,8 @@
 </head>
 <body>
 
+<div class="mobile-nav-overlay" aria-hidden="true"></div>
+
 <header class="main-header">
     
        
@@ -33,7 +35,16 @@
         </div>
 
         <!-- Navigation Section -->
-        <nav class="header-nav">
+        <nav class="header-nav" aria-label="Primary Navigation">
+            <div class="mobile-nav-header">
+                <a href="index.php" class="mobile-sidebar-logo">
+                    <i class="fa-solid fa-house-user"></i>
+                    <span>RealEstateIndia</span>
+                </a>
+                <button class="mobile-nav-close" type="button" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
             <ul>
                 <li class="nav-item has-dropdown">
                     <a href="#">Buy <i class="fa-solid fa-chevron-down"></i></a>
@@ -78,6 +89,11 @@
                     </ul>
                 </li>
             </ul>
+            <div class="mobile-nav-footer">
+                <a href="#" class="post-property-btn">Post Property</a>
+                <a href="#" class="mobile-nav-link"><i class="fa-regular fa-circle-question"></i> Help Center</a>
+                <a href="#" class="mobile-nav-link"><i class="fa-regular fa-user"></i> Sign In / Join Free</a>
+            </div>
         </nav>
 
         <!-- Action Section -->
@@ -107,25 +123,64 @@
 
 <script>
     const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const mobileNavClose = document.querySelector(".mobile-nav-close");
+    const mobileNavOverlay = document.querySelector(".mobile-nav-overlay");
     const headerNav = document.querySelector(".header-nav");
 
-    mobileMenuBtn.addEventListener("click", () => {
-        headerNav.classList.toggle("active");
+    function toggleMobileMenu(force) {
+        if (window.innerWidth > 1024) {
+            headerNav.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            return;
+        }
+
+        const shouldOpen = typeof force === 'boolean' ? force : !headerNav.classList.contains('active');
+        headerNav.classList.toggle('active', shouldOpen);
+        mobileNavOverlay.classList.toggle('active', shouldOpen);
+        document.body.classList.toggle('menu-open', shouldOpen);
+    }
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener("click", () => toggleMobileMenu());
+    }
+
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener("click", () => toggleMobileMenu(false));
+    }
+
+    if (mobileNavOverlay) {
+        mobileNavOverlay.addEventListener("click", () => toggleMobileMenu(false));
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024) {
+            toggleMobileMenu(false);
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            toggleMobileMenu(false);
+        }
     });
 
     const navItems = document.querySelectorAll(".nav-item > a");
     navItems.forEach(item => {
         item.addEventListener("click", function(e) {
-            e.preventDefault();
             const parentLi = this.parentElement;
-            
-            // Remove active class from all
+
+            if (window.innerWidth <= 1024 && parentLi.classList.contains('has-dropdown')) {
+                e.preventDefault();
+                parentLi.classList.toggle('open');
+                return;
+            }
+
+            e.preventDefault();
+
             document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('star-anim-active'));
-            
-            // Add to current
             parentLi.classList.add('star-anim-active');
-            
-            // Remove after 3 seconds
+
             setTimeout(() => {
                 parentLi.classList.remove('star-anim-active');
             }, 3000);

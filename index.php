@@ -9,9 +9,9 @@
 <!-- Main Homepage Sections -->
 <main>
     <?php include 'components/hero.php'; ?>
+    <?php include 'components/latest_properties.php'; ?>
     <?php include 'components/services.php'; ?>
     <?php include 'components/cities.php'; ?>
-    <?php include 'components/upcoming_projects.php'; ?>
     <?php include 'components/real_estate_services.php'; ?>
     <?php include 'components/agents.php'; ?>
     <?php include 'components/in_your_pocket.php'; ?>

@@ -1,31 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
     var wrap = document.querySelector('.agents-carousel-wrap');
     if (!wrap) return;
-    var grid = wrap.querySelector('.agents-grid');
+    var track = wrap.querySelector('.agents-track');
     var prevBtn = wrap.querySelector('.agents-nav-prev');
     var nextBtn = wrap.querySelector('.agents-nav-next');
-    if (!grid) return;
+    if (!track) return;
 
     function updateNavButtons() {
         if (!prevBtn || !nextBtn) return;
-        var scrollLeft = grid.scrollLeft;
-        var maxScroll = grid.scrollWidth - grid.clientWidth;
+        var scrollLeft = track.scrollLeft;
+        var maxScroll = track.scrollWidth - track.clientWidth;
         prevBtn.classList.toggle('agents-hidden', scrollLeft <= 1);
         nextBtn.classList.toggle('agents-hidden', scrollLeft >= maxScroll - 1);
     }
 
     function scrollGrid(direction) {
-        var card = grid.querySelector('.agent-card');
-        if (!card) return;
-        var cardWidth = card.offsetWidth + parseInt(getComputedStyle(grid).gap) || 16;
-        var amount = direction === 'prev' ? -cardWidth : cardWidth;
-        grid.scrollBy({ left: amount, behavior: 'smooth' });
+        var amount = direction === 'prev' ? -track.clientWidth : track.clientWidth;
+        track.scrollBy({ left: amount, behavior: 'smooth' });
     }
 
     if (prevBtn) prevBtn.addEventListener('click', function (e) { e.stopPropagation(); scrollGrid('prev'); });
     if (nextBtn) nextBtn.addEventListener('click', function (e) { e.stopPropagation(); scrollGrid('next'); });
 
-    grid.addEventListener('scroll', updateNavButtons, { passive: true });
+    track.addEventListener('scroll', updateNavButtons, { passive: true });
     window.addEventListener('resize', updateNavButtons);
     setTimeout(updateNavButtons, 100);
 

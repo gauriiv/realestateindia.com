@@ -1,17 +1,10 @@
 <!-- Link hero.css style file -->
 <link rel="stylesheet" href="assets/css/hero.css">
 
-<section class="hero-section" style="background-image: url('assets/images/hero_background.png');">
+<section class="hero-section" style="background-image: url('assets/images/hero-cover-image.png');">
     <div class="hero-overlay"></div>
     
     <div class="hero-container">
-        <!-- Google Rating Badge -->
-        <div class="hero-rating-badge">
-            <span class="rating-star"><i class="fa-solid fa-star"></i> 4.7</span>
-            <span class="rating-sep">.</span>
-            <span class="rating-reviews">18k Google reviews</span>
-        </div>
-        
         <!-- Headline -->
         <h1 class="hero-headline">India's Largest<br>Real Estate Platform</h1>
         
