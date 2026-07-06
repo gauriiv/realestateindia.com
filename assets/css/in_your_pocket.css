@@ -1,245 +1,461 @@
 /* ==========================================
    RealEstateIndia - In Your Pocket Section
+   Matches reference: white bg, left text, right phone mockup
    ========================================== */
 
-.in-your-pocket-section {
-    background: linear-gradient(100deg, #345482 0%, #152a54 70%);
-    padding: 10px 24px;
+/* ---- Section Wrapper ---- */
+.pocket-section {
+    background: #ffffff;
+    padding: 60px 24px 0 24px;
     font-family: 'Inter', sans-serif;
-    position: relative; 
     overflow: hidden;
-    margin-top: 40px;
-}
-
-.pocket-container {
-    max-width: 1200px;
-    margin: 100 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
     position: relative;
-    z-index: 8;
 }
 
-.pocket-content {
-    flex: 1;
-    max-width: 600px;
+/* Decorative Background Circle */
+.pocket-bg-circle {
+    position: absolute;
+    top: -160px;
+    right: -120px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245, 197, 24, 0.08) 0%, rgba(245, 197, 24, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
 }
 
-.pocket-title {
-    font-size: clamp(32px, 4vw, 48px);
+/* ---- Inner Container ---- */
+.pocket-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    gap: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   LEFT COLUMN
+   ======================================== */
+.pocket-left {
+    flex: 0 0 52%;
+    max-width: 52%;
+    padding-bottom: 60px;
+}
+
+/* Heading */
+.pocket-heading {
+    font-size: clamp(26px, 3.2vw, 42px);
     font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 16px;
-    line-height: 1.1;
+    color: #1a1a2e;
+    line-height: 1.15;
+    margin: 0 0 14px 0;
     letter-spacing: -0.02em;
 }
 
-.pocket-subtitle {
-    font-size: 18px;
-    color: #cbd5e1;
-    line-height: 1.6;
-    margin-bottom: 32px;
+/* Description */
+.pocket-desc {
+    font-size: clamp(14px, 1.5vw, 17px);
+    color: #4a4a68;
+    line-height: 1.65;
+    margin: 0 0 28px 0;
+    max-width: 420px;
 }
 
-.pocket-subtitle .highlight {
-    color: #ffe100;
+.pocket-desc strong {
+    color: #1a1a2e;
     font-weight: 700;
 }
 
-.pocket-form {
-    margin-bottom: 32px;
-}
-
-.pocket-form .input-group {
+/* ---- SMS Form ---- */
+.pocket-sms-form {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    max-width: 450px;
+    border: 2px solid #1a1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 430px;
+    margin-bottom: 32px;
+    background: #fff;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.mobile-input {
+.pocket-sms-form:focus-within {
+    border-color: #f5c518;
+    box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.2);
+}
+
+.pocket-mobile-input {
     flex: 1;
-    background: transparent;
     border: none;
     outline: none;
-    padding: 12px 16px;
-    color: #ffffff;
-    font-size: 16px;
-}
-
-.mobile-input::placeholder {
-    color: #94a3b8;
-}
-
-.btn-send-link {
-    background: #ffe100;
-    color: #0f172a;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 24px;
+    padding: 13px 18px;
     font-size: 15px;
-    font-weight: 200;
+    color: #1a1a2e;
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+    min-width: 0;
+}
+
+.pocket-mobile-input::placeholder {
+    color: #9ca3af;
+}
+
+.pocket-send-btn {
+    flex-shrink: 0;
+    background: #f5c518;
+    color: #1a1a2e;
+    border: none;
+    padding: 13px 26px;
+    font-size: 15px;
+    font-weight: 700;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 14px rgba(255, 225, 0, 0.25);
+    font-family: 'Inter', sans-serif;
+    transition: background 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
 }
 
-.btn-send-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 225, 0, 0.4);
-    background: #ffd30c;
+.pocket-send-btn:hover {
+    background: #e6b800;
+    transform: scale(1.03);
 }
 
-.pocket-download-actions {
+.pocket-send-btn:active {
+    transform: scale(0.98);
+}
+
+.pocket-send-btn:disabled {
+    opacity: 0.8;
+    cursor: default;
+    transform: none;
+}
+
+/* ---- Bottom Row: Store Buttons + QR ---- */
+.pocket-bottom-row {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
-.store-buttons {
-    display: flex;
-    gap: 16px;
-}
-
-.store-btn {
-    display: flex;
+/* Store Buttons */
+.pocket-store-btn {
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-    background: #000000;
+    gap: 9px;
+    background: #111111;
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.2s, background 0.2s;
+    padding: 9px 16px;
+    border-radius: 9px;
+    border: 1.5px solid #2a2a2a;
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    min-width: 140px;
 }
 
-.store-btn:hover {
+.pocket-store-btn:hover {
+    background: #222222;
     transform: translateY(-2px);
-    background: #111111;
-    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-.store-btn i {
-    font-size: 24px;
+.pocket-store-btn:focus-visible {
+    outline: 2px solid #f5c518;
+    outline-offset: 3px;
 }
 
-.store-btn .store-text {
+.pocket-store-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    fill: #ffffff;
+}
+
+.pocket-store-text {
     display: flex;
     flex-direction: column;
-}
-
-.store-btn .small-text {
-    font-size: 10px;
-    text-transform: uppercase;
-    line-height: 1;
-    color: #cbd5e1;
-}
-
-.store-btn .large-text {
-    font-size: 16px;
-    font-weight: 600;
     line-height: 1.2;
 }
 
-.qr-code-box {
+.pocket-store-label {
+    font-size: 9.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #cccccc;
+    font-weight: 400;
+}
+
+.pocket-store-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+/* QR Code Box */
+.pocket-qr-box {
     display: flex;
     align-items: center;
-    gap: 16px;
+    margin-left: 10px;
 }
 
-.qr-text {
-    font-size: 13px;
-    color: #94a3b8;
-    line-height: 1.4;
+.pocket-qr-img-wrap {
+    background: #fff;
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    flex-shrink: 0;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.qr-image {
-    background: #ffffff;
-    width: 64px;
-    height: 64px;
-    border-radius: 8px;
+.pocket-qr-img-wrap:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+.pocket-qr-img {
+    width: 88px;
+    height: 88px;
+    display: block;
+    object-fit: contain;
+}
+
+/* ========================================
+   RIGHT COLUMN – Phone Mockup
+   ======================================== */
+.pocket-right {
+    flex: 0 0 48%;
+    max-width: 48%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #0f172a;
-    font-size: 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
 }
 
-.pocket-image-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    max-width: 500px;
-}
-
-.glow-effect {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: #ffe100;
-    filter: blur(150px);
-    opacity: 0.15;
-    border-radius: 50%;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.phone-mockup-img {
+.pocket-phone-img {
     width: 100%;
+    max-width: 560px;
     height: auto;
-    border-radius: 24px;
-    z-index: 2;
-    position: relative;
-    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
-    box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.4);
-    transition: transform 0.5s ease;
+    display: block;
+    object-fit: contain;
+    object-position: bottom center;
+    margin-bottom: 0;
+    transform: translateY(0px);
+    transition: transform 0.4s ease, opacity 0.5s ease;
 }
 
-.pocket-image-wrapper:hover .phone-mockup-img {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+.pocket-right:hover .pocket-phone-img {
+    transform: translateY(-6px);
 }
 
-@media (max-width: 992px) {
-    .pocket-container {
-        flex-direction: column;
-        text-align: center;
+/* ========================================
+   RESPONSIVE – Small Desktop (max 1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+    .pocket-section {
+        padding: 50px 20px 0 20px;
     }
-    
-    .pocket-content {
+
+    .pocket-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .pocket-left {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+        padding-bottom: 0;
+        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
-    .pocket-download-actions {
+
+    .pocket-desc {
+        max-width: 520px;
+    }
+
+    .pocket-sms-form {
+        max-width: 480px;
+        width: 100%;
+    }
+
+    .pocket-bottom-row {
         justify-content: center;
+    }
+
+    .pocket-right {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pocket-phone-img {
+        max-width: 480px;
+        width: 100%;
+    }
+
+    .pocket-bg-circle {
+        top: -100px;
+        right: -80px;
+        width: 360px;
+        height: 360px;
     }
 }
 
+/* ========================================
+   RESPONSIVE – Tablet (max 768px)
+   ======================================== */
 @media (max-width: 768px) {
-    .store-buttons {
+    .pocket-section {
+        padding: 40px 18px 0 18px;
+    }
+
+    .pocket-wrapper {
+        gap: 32px;
+    }
+
+    .pocket-heading {
+        font-size: clamp(24px, 5vw, 32px);
+    }
+
+    .pocket-desc {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .pocket-sms-form {
+        border-radius: 9px;
+    }
+
+    .pocket-mobile-input {
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+
+    .pocket-send-btn {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    .pocket-bottom-row {
+        gap: 12px;
+    }
+
+    .pocket-store-btn {
+        min-width: 130px;
+        padding: 8px 14px;
+    }
+
+    .pocket-phone-img {
+        max-width: 420px;
+    }
+
+    .pocket-bg-circle {
+        top: -80px;
+        right: -60px;
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE – Mobile (max 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .pocket-section {
+        padding: 32px 14px 0 14px;
+    }
+
+    .pocket-wrapper {
+        gap: 28px;
+    }
+
+    .pocket-heading {
+        font-size: clamp(22px, 6.5vw, 26px);
+    }
+
+    .pocket-desc {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+
+    .pocket-sms-form {
+        border-radius: 8px;
+        border-width: 1.5px;
         flex-direction: column;
+        gap: 0;
+    }
+
+    .pocket-mobile-input {
+        padding: 12px 14px;
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .pocket-send-btn {
+        padding: 12px 14px;
+        font-size: 14px;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .pocket-bottom-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
         width: 100%;
     }
-    
-    .store-btn {
+
+    .pocket-store-btn {
+        width: 100%;
+        max-width: 240px;
         justify-content: center;
+        padding: 10px 16px;
     }
-    
-    .qr-code-box {
+
+    .pocket-qr-box {
+        margin-left: 0;
+    }
+
+    .pocket-right {
+        max-height: 320px;
+    }
+
+    .pocket-phone-img {
+        max-width: 300px;
+    }
+
+    .pocket-bg-circle {
         display: none;
+    }
+}
+
+/* ========================================
+   RESPONSIVE – Small Mobile (max 360px)
+   ======================================== */
+@media (max-width: 360px) {
+    .pocket-heading {
+        font-size: 20px;
+    }
+
+    .pocket-qr-box {
+        margin-left: 0;
+    }
+
+    .pocket-store-btn {
+        max-width: 100%;
+    }
+
+    .pocket-phone-img {
+        max-width: 240px;
     }
 }

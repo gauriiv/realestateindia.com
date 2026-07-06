@@ -3,9 +3,9 @@
 
 .trust-section {
     padding: 80px 0;
-    background-color: #fdfaf6; /* Elegant warm off-white */
-    border-top: 2px solid #e8dcc4;
-    border-bottom: 2px solid #e8dcc4;
+    background-color: #ffffff;
+    border-top: 1px solid #eef0f4;
+    border-bottom: 1px solid #eef0f4;
     font-family: 'Lato', sans-serif;
 }
 
@@ -45,7 +45,7 @@
     background-color: #ffffff;
     border: 1px solid #f0e6d2;
     border-radius: 8px;
-    transition: all 0.5s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
     cursor: default;
     box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
@@ -73,7 +73,7 @@
     color: #2c1e16;
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
-    transition: color 0.5s;
+    transition: color 0.35s ease;
 }
 
 .trust-item:hover h4 {
@@ -84,7 +84,7 @@
     font-size: 15px;
     color: #5c4b3f;
     line-height: 1.6;
-    transition: color 0.5s;
+    transition: color 0.35s ease;
 }
 
 .trust-item:hover p {

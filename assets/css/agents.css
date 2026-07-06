@@ -1,182 +1,446 @@
-/* Agents Section Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Section */
 .agents-section {
-    padding: 60px 0;
-    background-color: #f5f5f5;
+    padding: 80px 0;
+    background: #fafafa;
+    font-family: 'Poppins', sans-serif;
 }
 
+.agents-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
 .agents-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 48px;
 }
 
-.agents-header .section-title {
-    font-size: 28px;
-    font-weight: 400;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.agents-header .section-title span {
+.agents-title {
+    font-size: 44px;
     font-weight: 600;
-    color: #1d70b8;
-}
-
-.agents-header .section-subtitle {
-    color: #666;
-    font-size: 15px;
+    color: #111;
     margin: 0;
+    line-height: 1.2;
 }
 
-.view-all-agents {
-    background: transparent;
+.title-highlight {
+    color: #d84b4b;
+}
+
+.title-city {
+    color: #111;
+}
+
+/* Carousel Wrap */
+.agents-carousel-wrap {
+    position: relative;
+}
+
+/* Nav Buttons */
+.agents-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
     border: none;
-    color: #1d70b8;
-    font-weight: 600;
-    font-size: 15px;
+    background: #fff;
+    color: #7c3aed;
+    font-size: 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: all 0.3s;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
-.view-all-agents:hover {
-    color: #0045a5;
-    text-decoration: underline;
+.agents-nav:hover {
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
+.agents-nav:active {
+    transform: translateY(-50%) scale(0.94);
+}
+
+.agents-nav-prev {
+    left: 8px;
+}
+
+.agents-nav-next {
+    right: 8px;
+}
+
+.agents-nav.agents-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Grid (horizontal carousel) */
 .agents-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
     gap: 20px;
+    scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 .agent-card {
+    flex: 0 0 calc((100% - 60px) / 4);
+    min-width: 0;
     background: #fff;
+    border: 1px solid #e5e7eb;
     border-radius: 12px;
-    padding: 20px 15px;
-    border: 1px solid #eee;
+    padding: 22px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    text-align: center;
-    transition: all 0.4s ease;
+    gap: 14px;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Lighter Theme Hover Animation */
 .agent-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(29, 112, 184, 0.15);
-    border-color: #cce1f0;
-    background-color: #f0f7fc; /* Lighter theme on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
 
-.agent-profile {
-    width: 90px;
-    height: 90px;
+.agent-card:focus-visible {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+
+.agent-card:active {
+    transform: translateY(-2px);
+}
+
+/* Card Header */
+.agent-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.agent-logo {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
-    margin-bottom: 5px;
-}
-
-.agent-profile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.agent-details h4 {
-    margin: 0 0 5px 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.agent-card:hover .agent-details h4 {
-    color: #1d70b8;
-}
-
-.agent-firm {
-    color: #666;
-    font-size: 13px;
-    margin: 0 0 10px 0;
-}
-
-.agent-rating {
-    color: #fbbc04;
-    font-size: 12px;
-    margin-bottom: 10px;
-}
-
-.agent-rating span {
-    color: #888;
-    margin-left: 5px;
-}
-
-.agent-loc {
-    color: #777;
-    font-size: 13px;
-    margin-bottom: 15px;
-}
-
-.agent-loc i {
-    color: #1d70b8;
-    margin-right: 5px;
-}
-
-.agent-actions {
+    background: #fff;
+    border: 1px solid #e5e7eb;
     display: flex;
-    gap: 10px;
-    width: 100%;
+    align-items: center;
     justify-content: center;
 }
 
+.agent-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.agent-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.agent-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 2px;
+    line-height: 1.3;
+}
+
+.agent-location {
+    font-size: 15px;
+    color: #777;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.agent-location i {
+    font-size: 13px;
+    color: #999;
+}
+
+/* Stats */
+.agent-stats {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+}
+
+.stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.stat-num {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+    line-height: 1.3;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 36px;
+    background: #e5e7eb;
+    flex-shrink: 0;
+}
+
+/* Tags */
+.agent-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.4;
+}
+
+.tag-more {
+    border-color: #3b82f6;
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* Rating */
+.agent-rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #f59e0b;
+    font-size: 14px;
+}
+
+.agent-rating span {
+    color: #9ca3af;
+    margin-left: 4px;
+    font-size: 13px;
+}
+
+/* Actions */
+.agent-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
 .agent-btn {
-    padding: 8px 15px;
-    border-radius: 6px;
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
-    flex: 1;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .call-btn {
     background: #1d70b8;
     color: #fff;
-    border: 1px solid #1d70b8;
 }
 
 .call-btn:hover {
-    background: #0045a5;
+    background: #155a99;
+}
+
+.call-btn:active {
+    background: #104780;
+    transform: scale(0.97);
 }
 
 .message-btn {
     background: transparent;
     color: #1d70b8;
-    border: 1px solid #1d70b8;
+    border: 1.5px solid #1d70b8;
 }
 
 .message-btn:hover {
-    background: #f0f7fc;
+    background: #eef5fb;
 }
 
-@media (max-width: 1024px) {
-    .agents-grid {
-        grid-template-columns: repeat(2, 1fr);
+.message-btn:active {
+    transform: scale(0.97);
+}
+
+/* Bottom Link */
+.agents-bottom-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.agents-bottom-link a {
+    color: #3b82f6;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.agents-bottom-link a:hover {
+    border-bottom-color: #3b82f6;
+}
+
+.agents-bottom-link a i {
+    font-size: 18px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 1199px) {
+    .agent-card {
+        flex: 0 0 calc((100% - 40px) / 3);
+    }
+    .agents-title {
+        font-size: 36px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+    .agent-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+    .agents-title {
+        font-size: 32px;
+    }
+    .agents-nav-prev {
+        left: 6px;
+    }
+    .agents-nav-next {
+        right: 6px;
+    }
+}
+
+@media (max-width: 767px) {
+    .agents-section {
+        padding: 50px 0;
+    }
+    .agents-title {
+        font-size: 26px;
+    }
     .agents-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+        margin-bottom: 32px;
+    }
+    .agents-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    .agents-nav-prev {
+        left: 4px;
+    }
+    .agents-nav-next {
+        right: 4px;
     }
     .agents-grid {
-        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .agent-card {
+        flex: 0 0 calc((100% - 16px) / 2);
+        padding: 18px;
+    }
+    .agent-name {
+        font-size: 17px;
+    }
+    .agent-location {
+        font-size: 13px;
+    }
+    .stat-num {
+        font-size: 16px;
+    }
+    .stat-label {
+        font-size: 12px;
+    }
+    .tag {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+    .agents-bottom-link a {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .agents-section {
+        padding: 40px 0;
+    }
+    .agents-title {
+        font-size: 22px;
+    }
+    .agents-grid {
+        gap: 16px;
+    }
+    .agent-card {
+        flex: 0 0 100%;
+        padding: 20px;
+    }
+    .agent-logo {
+        width: 52px;
+        height: 52px;
+    }
+    .agent-name {
+        font-size: 18px;
+    }
+    .stat-num {
+        font-size: 17px;
+    }
+    .stat-label {
+        font-size: 13px;
+    }
+    .tag {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+    .agents-bottom-link a {
+        font-size: 16px;
     }
 }

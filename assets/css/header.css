@@ -13,24 +13,14 @@ html {
     --badge-yellow: #fbbc04;
     --border-color: #e5e5e5;
     --font-inter: 'Inter', sans-serif;
-    --transition: all 0.3s ease;
+    --transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 body {
     margin: 0;
     font-family: var(--font-inter);
-    /* Subtle Continuous Animated Background */
-    background: linear-gradient(-45deg, #f0f7fc, #e8f5e9, #fdfbf7, #f4f9f9);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    min-height: 300vh;
+    background: #ffffff;
     overflow-x: hidden;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 .main-header {
@@ -292,7 +282,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: all 0.3s ease;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
     z-index: 1001;
     display: flex;
     flex-direction: column;
@@ -355,11 +345,7 @@ body {
 .property-ticker {
     display: flex;
     white-space: nowrap;
-    animation: ticker 30s linear infinite;
-}
-
-.property-ticker:hover {
-    animation-play-state: paused;
+    overflow: hidden;
 }
 
 .ticker-item {
@@ -380,11 +366,6 @@ body {
 
 .ticker-item strong {
     color: var(--badge-yellow);
-}
-
-@keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
 }
 
 /* Star Click Animation */
