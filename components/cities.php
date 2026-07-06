@@ -1,10 +1,15 @@
 <link rel="stylesheet" href="assets/css/cities.css">
 
-<section class="cities-section">
+<section class="cities-section" aria-labelledby="cities-heading">
     <div class="section-container">
-        <h2 class="section-title">Explore Real Estate in Popular Indian Cities</h2>
-        <p class="section-subtitle">Discover the finest residential and investment opportunities across India's top cities, backed by smart insights and expert guidance.</p>
-        
+        <div class="section-header">
+            <div>
+                <p class="section-eyebrow">Popular Locations</p>
+                <h2 id="cities-heading" class="section-title">Explore Real Estate in Popular Indian Cities</h2>
+            </div>
+            <p class="section-subtitle">Discover premium homes, smart investments, and trusted guidance across India’s most sought-after cities.</p>
+        </div>
+
         <div class="cities-grid">
             <?php
             $cities = [
@@ -21,11 +26,12 @@
                 ['name' => 'Chennai', 'emoji' => '🛕']
             ];
 
-            foreach($cities as $index => $city) {
-                echo '<div class="city-card" onclick="window.location.href=\'properties.php?category=city&val='.urlencode($city['name']).'\'">';
-                echo '<div class="city-icon-container">'.$city['emoji'].'</div>';
-                echo '<div class="city-name-container"><div class="city-name">'.$city['name'].'</div></div>';
-                echo '</div>';
+            foreach ($cities as $city) {
+                $cityLink = 'properties.php?category=city&val=' . urlencode($city['name']);
+                echo '<a class="city-card" href="' . htmlspecialchars($cityLink) . '" aria-label="Explore properties in ' . htmlspecialchars($city['name']) . '">';
+                echo '<span class="city-icon-badge">' . htmlspecialchars($city['emoji']) . '</span>';
+                echo '<span class="city-content"><span class="city-name">' . htmlspecialchars($city['name']) . '</span><span class="city-meta">Explore listings</span></span>';
+                echo '</a>';
             }
             ?>
         </div>

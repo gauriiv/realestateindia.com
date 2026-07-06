@@ -1,0 +1,203 @@
+.prt-component-wrapper {
+        max-width: 1140px;
+        width: 100%;
+        margin: 40px auto;
+        padding: 0 15px;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .prt-component-wrapper * {
+        box-sizing: border-box;
+    }
+
+    /* Section Header Configuration */
+    .prt-section-header {
+        margin-bottom: 28px;
+        text-align: left;
+    }
+
+    .prt-main-heading {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 28px;
+        color: #333333;
+        font-weight: 700;
+        margin: 0 0 6px 0;
+        line-height: 1.2;
+    }
+
+    .prt-sub-heading {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 15px;
+        color: #666666;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    /* Slider Structure Layout */
+    .prt-slider-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .prt-cards-track {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 12px 4px;
+        width: 100%;
+        scrollbar-width: none;
+    }
+
+    .prt-cards-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Scoped Card Styling */
+    .prt-tool-card {
+        flex: 0 0 calc(25% - 15px);
+        min-width: 255px;
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        height: 285px;
+        overflow: hidden;
+        border: 1.5px solid #E5D5B5;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .prt-tool-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+    }
+
+    .prt-card-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 19px;
+        color: #7A4F1D; 
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0 0 8px 0;
+    }
+
+    .prt-card-desc {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: #777777;
+        margin: 0;
+        line-height: 1.4;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Bottom-right quarter-circle background (like services component) */
+    .prt-tool-card::after {
+        content: '';
+        position: absolute;
+        right: -1px;
+        bottom: -1px;
+        width: 140px;
+        height: 100px;
+        background: #FFF3D6;
+        border-radius: 100% 0 14px 0;
+        z-index: 0;
+    }
+
+    /* Font Awesome icon positioned over the quarter-circle */
+    .prt-tool-icon {
+        position: absolute;
+        right: 24px;
+        bottom: 68px;
+        z-index: 1;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: #C28E3A;
+        filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+    }
+
+    /* Inner card circular arrow CTA */
+    .prt-action-circle-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #C28E3A;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        z-index: 3;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .prt-action-circle-btn:hover {
+        background-color: #A37328;
+        transform: scale(1.05);
+    }
+
+    .prt-action-circle-btn svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 2.5;
+    }
+
+    /* Floating Navigation Controls */
+    .prt-floating-nav-next {
+        position: absolute;
+        right: -20px;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .prt-floating-nav-next:hover {
+        transform: scale(1.08);
+        background-color: #fafafa;
+    }
+
+    .prt-floating-nav-next svg {
+        width: 18px;
+        height: 18px;
+        stroke: #444444;
+        stroke-width: 2.5;
+        fill: none;
+    }
+
+    /* Responsive Configurations */
+    @media (max-width: 1024px) {
+        .prt-tool-card { flex: 0 0 calc(33.333% - 14px); }
+    }
+    @media (max-width: 768px) {
+        .prt-tool-card { flex: 0 0 calc(50% - 10px); }
+        .prt-floating-nav-next { right: -5px; }
+    }
+    @media (max-width: 480px) {
+        .prt-tool-card { flex: 0 0 100%; }
+        .prt-floating-nav-next { display: none; }
+    }

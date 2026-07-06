@@ -10,14 +10,12 @@
 <main>
     <?php include 'components/hero.php'; ?>
     <?php include 'components/latest_properties.php'; ?>
+    <?php include 'components/real_estate_tools.php'; ?>
     <?php include 'components/services.php'; ?>
     <?php include 'components/cities.php'; ?>
     <?php include 'components/real_estate_services.php'; ?>
     <?php include 'components/agents.php'; ?>
     <?php include 'components/in_your_pocket.php'; ?>
 </main>
-
-<!-- Modals (Hidden by default, triggered by header Sign In) -->
-<?php include 'components/modals.php'; ?>
 
 <?php include 'includes/footer.php'; ?>
